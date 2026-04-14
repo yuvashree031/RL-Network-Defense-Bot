@@ -1,0 +1,52 @@
+network:
+  ubuntu_ip:   "your_ip"
+  kali_ip:     "your_ip"
+  windows_ip:  "your_ip"
+  subnet:      "your_subnet"
+
+ubuntu:
+  user:         "your_username"
+  password:     "your_password"
+  metrics_port: 8080
+  firewall_simulate: false
+
+kali:
+  user:     "your_username"
+  password: "your_password"
+
+model:
+  model_dir:       "model"
+  lgb_path:        "model/lightgbm.pkl"
+  lr_path:         "model/logistic.pkl"
+  scaler_path:     "model/scaler.pkl"
+  selector_path:   "model/feature_selector.pkl"
+  label_enc_path:  "model/label_encoder.pkl"
+
+training:
+  total_timesteps:       200000
+  checkpoint_freq:       5000
+  learning_rate:         0.3
+  n_steps:               512
+  batch_size:            64
+  n_epochs:              10
+  gamma:                 0.90
+  obs_dim:               17
+  n_actions:             5
+  max_steps_per_episode: 30
+
+vmware:
+  vmrun_path: "your_vmrun_path"
+  ubuntu_vmx: "your_ubuntu_vmx_path"
+  kali_vmx:   "your_kali_vmx_path"
+  run_vms: ["ubuntu", "kali"]
+  boot_timeout:   120
+  ssh_port:       22
+  ssh_connect_timeout: 20
+  ssh_banner_timeout:  30
+  shutdown_after: false
+
+simulation: false
+
+dashboard:
+  port: 5000
+  host: "0.0.0.0"
