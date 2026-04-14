@@ -1,4 +1,4 @@
-# RL Defense Bot
+# RL Network Defense Bot
 
 ## Description
 
@@ -30,6 +30,31 @@ The system consists of several key components:
 - **Classifier**: Intrusion detection using pre-trained ML models
 - **Defense**: Firewall rule management (iptables)
 - **Dashboard**: Real-time monitoring interface
+
+## Screenshots
+
+### Dashboard Overview
+![Dashboard](Project%20Screenshots/Dashboard.jpeg)
+
+### DDoS Attack Detection
+![DDoS Attack](Project%20Screenshots/DDos_attack.jpeg)
+
+### Classification Results
+![Classification](Project%20Screenshots/Classification.jpeg)
+
+### System Logs
+![Logs](Project%20Screenshots/Logs.jpeg)
+
+### Firewall Rules
+![Firewall Rules](Project%20Screenshots/firewall_rules.jpeg)
+
+### Learning Graphs
+![Graph 1](Project%20Screenshots/Graph1.jpeg)
+
+![Graph 2](Project%20Screenshots/Graph2.jpeg)
+
+### Visualizations
+![Visuals](Project%20Screenshots/visuals.jpeg)
 
 ## Requirements
 
@@ -124,33 +149,3 @@ rl-defense-bot/
 ├── checkpoints/          # Training checkpoints
 └── logs/                 # Log files
 ```
-
-## Training
-
-The agent learns through episodes where it observes network traffic, classifies threats using ML models, and takes actions to block malicious IPs. Rewards are based on successful threat mitigation and minimal false positives.
-
-Key training parameters:
-- Total timesteps: 200,000
-- Learning rate: 0.3
-- Discount factor (gamma): 0.9
-- Episodes: Configurable via command line
-
-## Monitoring
-
-The SOC dashboard provides real-time visualization of:
-- Current threat levels and classifications
-- Firewall actions and blocked IPs
-- System metrics (CPU, memory)
-- Learning progress and rewards
-- Attack patterns and detection accuracy
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make changes and test thoroughly
-4. Submit a pull request
-
-## License
-
-[Specify license if applicable]
